@@ -15,7 +15,7 @@ export default function RootLayout({ children }: PropsWithChildren ) {
     return (
         <ClerkProvider>
             <html lang="en">
-                <body className={`${inter.className} bg-dark-1`}>
+                <body className={`${inter.className} bg-dark-1 flex items-center justify-center min-h-screen`}>
                     {children}
                 </body>
             </html>
