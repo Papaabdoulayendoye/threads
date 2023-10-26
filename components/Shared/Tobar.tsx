@@ -1,7 +1,7 @@
 import { OrganizationSwitcher, SignIn, SignOutButton, SignedIn } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import {dark} from "@clerk/themes";
 const Tobar = () => {
     return (
         <nav className='fixed top-0 z-30 flex w-full items-center justify-between bg-dark-2 px-6 py-3'>
@@ -21,10 +21,11 @@ const Tobar = () => {
                         </SignOutButton>
                     </SignedIn>
                 </div>
-                <OrganizationSwitcher  appearance={{ 
+                <OrganizationSwitcher  appearance={{
+                        baseTheme : dark,
                         elements : { 
                             organizationSwitcherTrigger : "py-2 px-4"
-                        }
+                        },
                     }} /> 
                 
             </div>
