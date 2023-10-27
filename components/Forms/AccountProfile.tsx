@@ -15,6 +15,9 @@ import {
 import { Input } from "@/components/ui/input"
 import * as z from 'zod'
 import Image from 'next/image';
+import { isBase64Image } from '@/lib/utils';
+import {useUploadThing} from "@/lib/uploadthing";
+
 
 interface Props {
     user : {
@@ -29,8 +32,13 @@ interface Props {
 }
 
 const AccountProfile = ({user, btnTitle} : Props) => {
+    const [files, setfiles] = useState<File[]>([])
     
-    // const [submitting, setsubmitting] = useState<boolean>(false)
+    const { startUpload } = useUploadThing(
+        "media"
+    )
+    
+    const [submitting, setsubmitting] = useState<boolean>(false)
     const form = useForm({
         resolver : zodResolver(UserValidation),
         defaultValues : {
@@ -41,11 +49,38 @@ const AccountProfile = ({user, btnTitle} : Props) => {
         }
     })
     
-    const handleImage = (e:ChangeEvent,fieldChange:(value :string) => void) => {
+    const handleImage = (e:ChangeEvent<HTMLInputElement>,fieldChange:(value :string) => void) => {
         e.preventDefault()
+        
+        const fileReader = new FileReader();
+        
+        if (e.target.files && e.target.files.length > 0) {
+            const file = e.target.files[0];
+            setfiles(Array.from(e.target.files))
+            
+            if (!file.type.includes('image')) return; 
+            fileReader.onload = async (e) => {
+                const imageDataUrl = e.target?.result?.toString() || '';
+                fieldChange(imageDataUrl)
+            }
+            fileReader.readAsDataURL(file);
+        }
+        
+        
     }
-    const onSubmit = (values : z.infer<typeof UserValidation>) => {
-        console.log(values)
+    const onSubmit = async (values : z.infer<typeof UserValidation>) => {
+        const blob = values?.profile_photo;
+        const newProfileImage = isBase64Image(blob)
+        
+        if (newProfileImage) {
+            const imgRes = await startUpload(files)
+            
+            if (imgRes && imgRes[0].url) {
+                values.profile_photo = imgRes[0].url;
+            }
+        }
+        // TODO : 
+        
     }
     
     return (
@@ -60,7 +95,7 @@ const AccountProfile = ({user, btnTitle} : Props) => {
                     <FormLabel className='flex h-24 w-24 items-center justify-center rounded-full bg-dark-4 !important'>
                         {field?.value ? (
                         <Image src={field.value} alt='profile_photo' width={96} height={96}
-                        className='rounded-full !object-cover' priority />) :
+                        className='rounded-full !object-cover h-[100%] w-[100%]' priority />) :
                         
                         (
                         <Image src={'/profile.svg'} alt='profile_photo' width={24} height={24} className='object-contain'/>
