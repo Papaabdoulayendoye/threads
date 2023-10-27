@@ -1,4 +1,10 @@
-export default function Home() {
+import { fetchPost } from '@/lib/actions/thread.actions';
+
+export default async function Home() {
+    const result = await fetchPost(1,30);
+    console.log("result");
+    console.log(result);
+    
     return (
     <>
         <div className=''>
