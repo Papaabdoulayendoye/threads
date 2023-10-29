@@ -53,7 +53,49 @@ export async function fetchPost(pageNumber = 1, pageSize = 20) {
         const isNext = totalPostCount > skipAmount + posts.length;
         
         return {posts, isNext}
+        
     }catch (error : any) {
-        throw new Error("Failed to create a thread",error.message)
+        throw new Error("Failed to fetch threads",error.message)
+        console.log("Error : ", error.message);
+        
+    }
+}
+
+export const fetchThread = async (id : string) => {
+    await connectToDB();
+    
+    try {
+        
+        const thread = await Thread.findById(id).populate({
+            path : 'author',
+            model : User,
+            select : '_id id name image'
+        }).populate({
+            path : 'children',
+            populate : [
+                {
+                    path : 'author',
+                    model : User,
+                    select : "_id id name image"
+                },
+                {
+                    path : 'children',
+                    model : Thread,
+                    populate : {
+                        path : 'author',
+                        model : User,
+                        select : "_id id name image"
+                    }
+                }
+            ]
+        }).exec()
+        
+        
+        return thread;
+        
+    } catch (error:any) {
+        throw new Error("Failed to fetch Thread",error.message);
+        
+        
     }
 }
