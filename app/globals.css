@@ -97,9 +97,7 @@
     .tab {
         @apply flex min-h-[50px] flex-1 items-center gap-3 bg-dark-2 text-light-2 data-[state=active]:bg-[#0e0e12] data-[state=active]:text-light-2 !important;
     }
-    .no-focus {
-        @apply focus-visible: ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
-    }
+    
     .account-form_image-label {
         @apply flex h-24 w-24 items-center justify-center rounded-full bg-dark-4 !important;
     }
@@ -135,4 +133,19 @@
 .main {
     display: grid;
     grid-template-columns:  minmax(0, 5fr)  minmax(0, 12fr)  minmax(300px, 7fr);
+}
+
+/* .cl-rootBox {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+@layer utilities {
+    .no-focus {
+        @apply focus-visible: ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 !important;
+    }
 }

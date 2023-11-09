@@ -6,7 +6,11 @@ const Onboarding = async () => {
     const User = await currentUser()
     
     const userInfo = {
-        
+        _id : '',
+        username : '',
+        name : '',
+        bio : '',
+        image : ''
     }
     
     const UserData = {
