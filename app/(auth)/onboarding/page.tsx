@@ -14,8 +14,8 @@ const Onboarding = async () => {
     }
     
     const UserData = {
-        id : User?.id,
-        objectId : userInfo?._id,
+        id : User?.id || '' ,
+        objectId : userInfo?._id || '',
         username : userInfo?.username || User?.username,
         name : userInfo?.name || User?.firstName || '',
         bio : userInfo?.bio || '',
