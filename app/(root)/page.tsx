@@ -1,12 +1,19 @@
 import ThreadCard from '@/components/Cards/ThreadCard';
 import { fetchPost } from '@/lib/actions/thread.actions';
+import { fetchUser } from '@/lib/actions/user.actions';
 import { currentUser } from '@clerk/nextjs';
+import { redirect } from 'next/navigation';
 
 export default async function Home() {
     const result = await fetchPost(1,30);
     const user = await currentUser()
+    if (!user?.id) {
+        redirect('/sign-in')
+    }
+    const userInfo = await fetchUser(user.id);
+    if (!userInfo?.onboarded) redirect('/onboarding');
+    
     return (
-    <>
         <div className=''>
             <h1 className='text-left text-heading2-bold text-light-1'>Home</h1>
             
@@ -30,8 +37,6 @@ export default async function Home() {
                 ))}
             </>
             )}
-            
         </div>
-    </>
     )
 }
