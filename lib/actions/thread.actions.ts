@@ -43,7 +43,7 @@ export async function fetchPost(pageNumber = 1, pageSize = 20) {
     
     try 
     {
-        // Fetch posts that have no parents (top - level...)
+        
         const postsQuery = Thread.find({ parentId : {$in :[ null, undefined ]}}).sort({createAt : 'desc'}).skip(skipAmount).limit(pageSize).populate({path : 'author', model : User }).populate({path : 'children', populate : { path : 'author', model : User, select : "_id name parentId image" }
             })
         
