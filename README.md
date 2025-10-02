@@ -1,21 +1,21 @@
-&lt;div align="center"&gt;
-  &lt;br /&gt;
-  &lt;img src="https://github.com/adrianhajdin/threads/assets/151519281/a9cd1088-968b-4b1d-b21a-f5f97d0c202b" alt="Threads Clone Banner" width="100%" /&gt;
-  &lt;br /&gt;
+<div align="center">
+  <br />
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/151519281/293174555-a9cd1088-968b-4b1d-b21a-f5f97d0c202b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251002%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251002T140330Z&X-Amz-Expires=300&X-Amz-Signature=26d3a172666b24f22c56b349d877902e345c965dc76a39fed05412d304e08518&X-Amz-SignedHeaders=host" alt="Threads Clone Banner" width="100%" />
+  <br />
 
-  &lt;div&gt;
-    &lt;img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="Next.js" /&gt;
-    &lt;img src="https://img.shields.io/badge/-MongoDB-black?style=for-the-badge&logoColor=white&logo=mongodb&color=47A248" alt="MongoDB" /&gt;
-    &lt;img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="Tailwind CSS" /&gt;
-    &lt;img src="https://img.shields.io/badge/-Clerk-black?style=for-the-badge&logoColor=white&logo=clerk&color=6C47FF" alt="Clerk" /&gt;
-    &lt;img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" /&gt;
-  &lt;/div&gt;
+  <div>
+    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="Next.js" />
+    <img src="https://img.shields.io/badge/-MongoDB-black?style=for-the-badge&logoColor=white&logo=mongodb&color=47A248" alt="MongoDB" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="Tailwind CSS" />
+    <img src="https://img.shields.io/badge/-Clerk-black?style=for-the-badge&logoColor=white&logo=clerk&color=6C47FF" alt="Clerk" />
+    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" />
+  </div>
 
-  &lt;h3 align="center"&gt;Threads Clone – Full-Stack Social App&lt;/h3&gt;
-  &lt;p align="center"&gt;
+  <h3 align="center">Threads Clone – Full-Stack Social App</h3>
+  <p align="center">
     Clone de Threads avec Next.js, MongoDB, Clerk & Tailwind • Temps réel • Commentaires imbriqués • Communautés
-  &lt;/p&gt;
-&lt;/div&gt;
+  </p>
+</div>
 
 ---
 
