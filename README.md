@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+&lt;div align="center"&gt;
+  &lt;br /&gt;
+  &lt;img src="https://github.com/adrianhajdin/threads/assets/151519281/a9cd1088-968b-4b1d-b21a-f5f97d0c202b" alt="Threads Clone Banner" width="100%" /&gt;
+  &lt;br /&gt;
 
-## Getting Started
+  &lt;div&gt;
+    &lt;img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="Next.js" /&gt;
+    &lt;img src="https://img.shields.io/badge/-MongoDB-black?style=for-the-badge&logoColor=white&logo=mongodb&color=47A248" alt="MongoDB" /&gt;
+    &lt;img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="Tailwind CSS" /&gt;
+    &lt;img src="https://img.shields.io/badge/-Clerk-black?style=for-the-badge&logoColor=white&logo=clerk&color=6C47FF" alt="Clerk" /&gt;
+    &lt;img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" /&gt;
+  &lt;/div&gt;
 
-First, run the development server:
+  &lt;h3 align="center"&gt;Threads Clone – Full-Stack Social App&lt;/h3&gt;
+  &lt;p align="center"&gt;
+    Clone de Threads avec Next.js, MongoDB, Clerk & Tailwind • Temps réel • Commentaires imbriqués • Communautés
+  &lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+## 📌 À propos
+
+**Threads Clone** est une application sociale full-stack inspirée de Threads (Meta), développée dans le cadre de ma formation **Master TNSID**.  
+Elle permet de :
+- Publier des threads et commentaires (y compris imbriqués)
+- Rejoindre ou créer des communautés
+- Recevoir des notifications en temps réel
+- Rechercher des utilisateurs et des communautés
+
+&gt; Projet open source • Idéal pour démontrer mes compétences en **Next.js**, **MongoDB**, **Clerk**, **webhooks** et **design responsive**.
+
+---
+
+## 🧪 Stack technique
+
+| Côté         | Technologies                                                                 |
+|--------------|------------------------------------------------------------------------------|
+| **Frontend** | Next.js 14, TypeScript, Tailwind CSS, ShadCN                               |
+| **Backend**  | Next.js API Routes, MongoDB (Mongoose), Webhooks                           |
+| **Auth**     | Clerk (email, Google, GitHub)                                               |
+| **Forms**    | React Hook Form + Zod (validation)                                         |
+| **Fichiers** | UploadThing (upload d’images)                                              |
+| **Déploiement** | Vercel                                                                 |
+
+---
+
+## ✨ Fonctionnalités principales
+
+- 🔐 **Authentification** via Clerk (email, Google, GitHub)
+- 🧵 **Création de threads** avec texte et images
+- 💬 **Commentaires imbriqués** (nested replies)
+- 🔍 **Recherche d’utilisateurs et communautés** avec pagination
+- 🔔 **Notifications en temps réel** via webhooks
+- 👥 **Création et gestion de communautés** (admin, membres, rôles)
+- 📱 **Interface responsive** (mobile-first)
+- 🎨 **Design inspiré de Figma** – pixel-perfect
+
+---
+
+## 🚀 Lancement rapide
+
+### Prérequis
+
+- Node.js &gt;= 18
+- MongoDB (local ou [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+- Compte [Clerk](https://clerk.com/) + [UploadThing](https://uploadthing.com/)
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Papaabdoulayendoye/threads.git
+cd threads
+npm install
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
