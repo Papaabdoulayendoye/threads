@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/151519281/293174555-a9cd1088-968b-4b1d-b21a-f5f97d0c202b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20251002%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251002T140330Z&X-Amz-Expires=300&X-Amz-Signature=26d3a172666b24f22c56b349d877902e345c965dc76a39fed05412d304e08518&X-Amz-SignedHeaders=host" alt="Threads Clone Banner" width="100%" />
+  <img src="https://i.postimg.cc/JzRN1Cbs/threadsvf.png" alt="Threads Clone Banner" width="100%" />
   <br />
 
   <div>
